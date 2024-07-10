@@ -121,10 +121,9 @@ elapsed from the time this function is invoked.</p>
 <ul>
 <li><a id="subscribe_duration.0"></a> own&lt;<a href="#pollable"><a href="#pollable"><code>pollable</code></a></a>&gt;</li>
 </ul>
-<h2><a id="wasi_clocks_wall_clock_0_2_4"></a>Import interface wasi:clocks/wall-clock@0.2.4</h2>
-<p>WASI Wall Clock is a clock API intended to let users query the current
-time. The name &quot;wall&quot; makes an analogy to a &quot;clock on the wall&quot;, which
-is not necessarily monotonic as it may be reset.</p>
+<h2><a name="wasi_clocks_system_clock_0_2_4"></a>Import interface wasi:clocks/system-clock@0.2.4</h2>
+<p>WASI System Clock is a clock API intended to let users query the current
+time. The clock is not necessarily monotonic as it may be reset.</p>
 <p>It is intended to be portable at least between Unix-family platforms and
 Windows.</p>
 <p>A wall clock is a clock which measures the date and time according to
