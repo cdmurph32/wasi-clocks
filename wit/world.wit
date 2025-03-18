@@ -5,6 +5,9 @@ world imports {
     @since(version = 0.2.0)
     import monotonic-clock;
     @since(version = 0.2.0)
+    @deprecated(version = 0.2.5)
+    import wall-clock;
+    @since(version = 0.2.5)
     import system-clock;
     @unstable(feature = clocks-timezone)
     import timezone;

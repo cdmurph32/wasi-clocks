@@ -101,7 +101,7 @@ corresponding to a clock tick.</p>
 </ul>
 <h4><a id="subscribe_clock_point"></a><code>subscribe-clock-point: func</code></h4>
 <p>Create a <a href="#pollable"><code>pollable</code></a> which will resolve once the specified clock point
-has occured.</p>
+has occurred.</p>
 <h5>Params</h5>
 <ul>
 <li><a id="subscribe_clock_point.when"></a><code>when</code>: <a href="#monotonic_clock_point"><a href="#monotonic_clock_point"><code>monotonic-clock-point</code></a></a></li>
@@ -121,7 +121,7 @@ elapsed from the time this function is invoked.</p>
 <ul>
 <li><a id="subscribe_duration.0"></a> own&lt;<a href="#pollable"><a href="#pollable"><code>pollable</code></a></a>&gt;</li>
 </ul>
-<h2><a name="wasi_clocks_system_clock_0_2_4"></a>Import interface wasi:clocks/system-clock@0.2.4</h2>
+<h2><a id="wasi_clocks_system_clock_0_2_4"></a>Import interface wasi:clocks/system-clock@0.2.4</h2>
 <p>WASI System Clock is a clock API intended to let users query the current
 time. The clock is not necessarily monotonic as it may be reset.</p>
 <p>It is intended to be portable at least between Unix-family platforms and
@@ -134,12 +134,12 @@ monotonic, making it unsuitable for measuring elapsed time.</p>
 <p>It is intended for reporting the current date and time for humans.</p>
 <hr />
 <h3>Types</h3>
-<h4><a name="instant"></a><code>record instant</code></h4>
+<h4><a id="instant"></a><code>record instant</code></h4>
 <p>An exact time in seconds plus nanoseconds.</p>
 <h5>Record Fields</h5>
 <ul>
-<li><a name="instant.seconds"></a><code>seconds</code>: <code>u64</code></li>
-<li><a name="instant.nanoseconds"></a><code>nanoseconds</code>: <code>u32</code></li>
+<li><a id="instant.seconds"></a><code>seconds</code>: <code>u64</code></li>
+<li><a id="instant.nanoseconds"></a><code>nanoseconds</code>: <code>u32</code></li>
 </ul>
 <hr />
 <h3>Functions</h3>
@@ -153,19 +153,19 @@ also known as <a href="https://en.wikipedia.org/wiki/Unix_time">Unix Time</a>.</
 <p>The nanoseconds field of the output is always less than 1000000000.</p>
 <h5>Return values</h5>
 <ul>
-<li><a name="now.0"></a> <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
+<li><a id="now.0"></a> <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
 </ul>
 <h4><a id="resolution"></a><code>resolution: func</code></h4>
 <p>Query the resolution of the clock.</p>
 <p>The nanoseconds field of the output is always less than 1000000000.</p>
 <h5>Return values</h5>
 <ul>
-<li><a name="resolution.0"></a> <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
+<li><a id="resolution.0"></a> <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
 </ul>
 <h2><a id="wasi_clocks_timezone_0_2_4"></a>Import interface wasi:clocks/timezone@0.2.4</h2>
 <hr />
 <h3>Types</h3>
-<h4><a name="instant"></a><code>type instant</code></h4>
+<h4><a id="instant"></a><code>type instant</code></h4>
 <p><a href="#instant"><a href="#instant"><code>instant</code></a></a></p>
 <p>
 <hr />
@@ -182,9 +182,9 @@ should be the string <code>UTC</code>.</p>
 representation of the UTC offset may be returned, such as <code>-04:00</code>.</p>
 <h5>Return values</h5>
 <ul>
-<li><a name="id.0"></a> <code>string</code></li>
+<li><a id="id.0"></a> <code>string</code></li>
 </ul>
-<h4><a name="utc_offset"></a><code>utc-offset: func</code></h4>
+<h4><a id="utc_offset"></a><code>utc-offset: func</code></h4>
 <p>The number of nanoseconds difference between UTC time and the local
 time of the currently configured timezone at the exact time of
 <a href="#instant"><code>instant</code></a>.</p>
@@ -195,7 +195,7 @@ time of the currently configured timezone at the exact time of
 should return 0.</p>
 <h5>Params</h5>
 <ul>
-<li><a name="utc_offset.when"></a><code>when</code>: <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
+<li><a id="utc_offset.when"></a><code>when</code>: <a href="#instant"><a href="#instant"><code>instant</code></a></a></li>
 </ul>
 <h5>Return values</h5>
 <ul>
